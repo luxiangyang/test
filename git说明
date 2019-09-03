@@ -1,0 +1,61 @@
+git桌面版上传文件：
+1、定位到代码库路径：
+---------------------------------------------------
+HK-LUXY@hkrt-luxy MINGW64 ~
+$ pwd
+/c/Users/HK-LUXY
+
+HK-LUXY@hkrt-luxy MINGW64 ~
+$ cd /D/git/
+
+HK-LUXY@hkrt-luxy MINGW64 /D/git
+$ pwd
+/D/git
+---------------------------------------------------
+
+2、在代码库路径克隆git代码库到本地：
+---------------------------------------------------
+HK-LUXY@hkrt-luxy MINGW64 /D/git
+$ git clone https://github.com/luxiangyang/test.git
+Cloning into 'test'...
+warning: You appear to have cloned an empty repository.
+HK-LUXY@hkrt-luxy MINGW64 /D/git
+
+$ ls
+test/
+
+HK-LUXY@hkrt-luxy MINGW64 /D/git
+$ cd test
+
+HK-LUXY@hkrt-luxy MINGW64 /D/git/test (master)
+---------------------------------------------------
+
+3、在/D/git/test路径下编写代码，比如test.txt文件，上传test.txt到git库：
+---------------------------------------------------------------------
+HK-LUXY@hkrt-luxy MINGW64 /D/git/test (master)
+$ git add test.txt
+warning: LF will be replaced by CRLF in test.txt.
+The file will have its original line endings in your working directory
+----------------------------------------------------------------------
+为刚才上传的文件写备注：git commit -m ""
+---------------------------------------------------
+HK-LUXY@hkrt-luxy MINGW64 /D/git/test (master)
+$ git commit -m "first commit"
+[master (root-commit) 59cc8f2] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+---------------------------------------------------
+上传代码文件：
+---------------------------------------------------
+HK-LUXY@hkrt-luxy MINGW64 /D/git/test (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 218 bytes | 218.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/luxiangyang/test.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+----------------------------------------------------------------------
+
+
